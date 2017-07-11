@@ -6,7 +6,7 @@ header {
 	overflow: hidden;
 	padding: 20px;
 }
-
+	
 .nav-lockup {
 	text-align: center;	
 }
@@ -35,13 +35,13 @@ header {
 			}
 
 			&:hover::after {
-				height: 2px;
+				height: 3px;
 			}
 		}
 
     	a {
     		font-size: 16px;
-    		color: #000;
+    		color: #444;
     		text-transform: uppercase;
     		font-weight: 700;
     	}
@@ -50,4 +50,34 @@ header {
     		width: 200px;
     	}
     }
+}
+
+	// .claim-lockup {
+	// 	text-align: center;
+	// 	padding: 70px;
+
+	// 	.claim {
+	// 		display: inline-block;
+	// 		padding: 20px;
+	// 		border: 8px #fff solid;
+	// 		position: relative;
+
+	// 		.headline {
+	//     		font-size: 100px;
+	//     		margin: 0;
+	//     		text-transform: uppercase;
+	// 			line-height: 0.8;
+	// 		}
+			
+	// 		.kicker {
+	// 			position: absolute;
+	// 		}	
+	// 	}
+	// }
+
+.claim {
+    // width: 55%;
+    width: 730px;
+    margin: 80px auto;
+    display: block;
 }

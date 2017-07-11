@@ -31,13 +31,18 @@ header {
         left: 0px;
         padding: 0 20px; }
       .nav li .nav-line:hover::after {
-        height: 2px; }
+        height: 3px; }
     .nav li a {
       font-size: 16px;
-      color: #000;
+      color: #444;
       text-transform: uppercase;
       font-weight: 700; }
     .nav li .logo {
       width: 200px; }
+
+.claim {
+  width: 730px;
+  margin: 80px auto;
+  display: block; }
 
 /*# sourceMappingURL=app.css.map */
