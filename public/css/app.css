@@ -8,6 +8,9 @@
 .p-relative {
   position: relative; }
 
+.clearfix {
+  clear: both; }
+
 .c-white {
   color: #FFF !important; }
 
@@ -119,7 +122,7 @@ li.logo {
       text-align: left; }
       .section .heading.left::after {
         content: "";
-        background-color: #019444;
+        background-color: #D00101;
         position: absolute;
         bottom: -25px;
         padding: 0 13px;
@@ -129,7 +132,7 @@ li.logo {
       text-align: right; }
       .section .heading.right::after {
         content: "";
-        background-color: #019444;
+        background-color: #015393;
         position: absolute;
         bottom: -25px;
         padding: 0 13px;
@@ -150,15 +153,90 @@ li.logo {
   display: block;
   top: -280px; }
 
-.floating-content {
-  height: 350px; }
-  .floating-content .row {
-    margin: 0 -50px;
-    width: 1150px !important;
-    max-width: none;
-    width: 100%; }
-    .floating-content .row .large-6 {
+.floating-content .row {
+  margin: 0 -50px;
+  max-width: none;
+  width: 100%; }
+  .floating-content .row.float-full {
+    width: 1150px !important; }
+    .floating-content .row.float-full .large-6 {
       height: 350px; }
+  .floating-content .row.float-right {
+    width: 850px !important;
+    float: right; }
+    .floating-content .row.float-right .large-6 {
+      height: 300px; }
+  .floating-content .row.float-left {
+    width: 850px !important; }
+    .floating-content .row.float-left .large-6 {
+      height: 300px; }
+
+.scrollup {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 90px;
+  right: 350px;
+  display: none;
+  background-color: #015393; }
+  .scrollup i {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translateY(-50%) translateX(50%);
+    color: #FFF; }
+
+footer {
+  width: 100%;
+  margin-top: 75px;
+  padding: 25px 25px 0 25px;
+  background-color: #252525; }
+  footer div.row {
+    height: auto; }
+    footer div.row .columns {
+      padding: 25px 0 0 40px; }
+      footer div.row .columns h5 {
+        color: #FFF;
+        text-transform: uppercase;
+        font-family: "Avenir";
+        letter-spacing: 3px; }
+      footer div.row .columns ul {
+        list-style: none;
+        padding-left: 0;
+        margin-left: 0; }
+        footer div.row .columns ul li {
+          color: #CCC;
+          font-weight: 400;
+          font-family: "Avenir";
+          letter-spacing: 1px; }
+    footer div.row:nth-child(3) {
+      margin-top: 15px; }
+      footer div.row:nth-child(3) ul li {
+        text-transform: uppercase;
+        color: #FFF;
+        display: inline-block;
+        font-family: "Avenir";
+        letter-spacing: 1px; }
+        footer div.row:nth-child(3) ul li:not(first-child) {
+          margin-right: 10px; }
+    footer div.row:last-child {
+      text-align: center;
+      margin-top: 20px; }
+      footer div.row:last-child p {
+        color: #FFF;
+        font-family: "Avenir"; }
+  footer div.social-buttons {
+    position: absolute;
+    top: 0;
+    right: 80px; }
+    footer div.social-buttons a {
+      display: block;
+      width: 38px;
+      height: 38px; }
+  footer div.divider {
+    border-top: 1px solid #CCC;
+    margin: 30px 0px 10px 0px;
+    background: #252525; }
 
 .about .floating-content .row .columns:first-child {
   background: #019344 url("./../assets/about-back.png") no-repeat -15px 90%;
@@ -197,5 +275,205 @@ li.logo {
   .about .floating-content .row .columns:last-child div.fill {
     height: 100%;
     border: 4px solid rgba(1, 147, 68, 0.55); }
+
+.equipments .floating-content .row .columns {
+  padding: 40px 70px 0px 50px; }
+  .equipments .floating-content .row .columns:first-child {
+    background-image: url("./../assets/equipment-mimaki.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; }
+  .equipments .floating-content .row .columns:last-child {
+    background-color: #015393; }
+    .equipments .floating-content .row .columns:last-child h4 {
+      font-size: 20px;
+      color: #FFF;
+      letter-spacing: 1px;
+      margin-bottom: 15px; }
+    .equipments .floating-content .row .columns:last-child p {
+      color: #FFF;
+      line-height: 30px;
+      letter-spacing: 1px; }
+.equipments .controls a {
+  padding: 15px 15px;
+  color: #FFF;
+  position: absolute; }
+  .equipments .controls a.prev {
+    background-color: #015393;
+    bottom: 130px;
+    left: 210px; }
+  .equipments .controls a.next {
+    background-color: #4896d2;
+    bottom: 100px;
+    left: 240px; }
+
+.contact .floating-content .row .columns:first-child {
+  padding: 40px 60px 0px 50px;
+  background-color: #D00101; }
+  .contact .floating-content .row .columns:first-child h4 {
+    font-size: 20px;
+    color: #FFF;
+    letter-spacing: 1px;
+    margin-bottom: 15px; }
+  .contact .floating-content .row .columns:first-child p {
+    color: #FFF;
+    line-height: 30px;
+    letter-spacing: 1px; }
+.contact .floating-content .row .columns:last-child {
+  background-color: #FF4C4C;
+  padding: 30px 30px; }
+  .contact .floating-content .row .columns:last-child h4 {
+    color: #FFF;
+    font-family: "Avenir";
+    font-size: 20px; }
+  .contact .floating-content .row .columns:last-child form fieldset {
+    display: block;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    border: none; }
+    .contact .floating-content .row .columns:last-child form fieldset:first-child input {
+      background-color: #FF4C4C;
+      color: #FFF;
+      padding: 5px 15px;
+      width: 49% !important;
+      display: inline-block !important; }
+      .contact .floating-content .row .columns:last-child form fieldset:first-child input::-webkit-input-placeholder {
+        /* Chrome/Opera/Safari */
+        color: #FFF; }
+      .contact .floating-content .row .columns:last-child form fieldset:first-child input::-moz-placeholder {
+        /* Firefox 19+ */
+        color: #FFF; }
+      .contact .floating-content .row .columns:last-child form fieldset:first-child input:-ms-input-placeholder {
+        /* IE 10+ */
+        color: #FFF; }
+      .contact .floating-content .row .columns:last-child form fieldset:first-child input:-moz-placeholder {
+        /* Firefox 18- */
+        color: #FFF; }
+      .contact .floating-content .row .columns:last-child form fieldset:first-child input:last-child {
+        float: right; }
+    .contact .floating-content .row .columns:last-child form fieldset:nth-child(2) input {
+      background-color: #FF4C4C;
+      color: #FFF;
+      padding: 5px 15px;
+      width: 100%;
+      display: inline-block !important; }
+      .contact .floating-content .row .columns:last-child form fieldset:nth-child(2) input::-webkit-input-placeholder {
+        /* Chrome/Opera/Safari */
+        color: #FFF; }
+      .contact .floating-content .row .columns:last-child form fieldset:nth-child(2) input::-moz-placeholder {
+        /* Firefox 19+ */
+        color: #FFF; }
+      .contact .floating-content .row .columns:last-child form fieldset:nth-child(2) input:-ms-input-placeholder {
+        /* IE 10+ */
+        color: #FFF; }
+      .contact .floating-content .row .columns:last-child form fieldset:nth-child(2) input:-moz-placeholder {
+        /* Firefox 18- */
+        color: #FFF; }
+    .contact .floating-content .row .columns:last-child form fieldset:nth-child(3) textarea {
+      background-color: #FF4C4C;
+      color: #FFF;
+      padding: 5px 15px;
+      width: 100%;
+      display: inline-block !important; }
+      .contact .floating-content .row .columns:last-child form fieldset:nth-child(3) textarea::-webkit-input-placeholder {
+        /* Chrome/Opera/Safari */
+        color: #FFF; }
+      .contact .floating-content .row .columns:last-child form fieldset:nth-child(3) textarea::-moz-placeholder {
+        /* Firefox 19+ */
+        color: #FFF; }
+      .contact .floating-content .row .columns:last-child form fieldset:nth-child(3) textarea:-ms-input-placeholder {
+        /* IE 10+ */
+        color: #FFF; }
+      .contact .floating-content .row .columns:last-child form fieldset:nth-child(3) textarea:-moz-placeholder {
+        /* Firefox 18- */
+        color: #FFF; }
+  .contact .floating-content .row .columns:last-child form button {
+    border: 1px solid #FFF;
+    padding: 5px 15px 5px 5px;
+    margin-top: 10px;
+    background-color: #FFF;
+    float: right; }
+    .contact .floating-content .row .columns:last-child form button i {
+      color: #D00101;
+      margin: 0 10px; }
+    .contact .floating-content .row .columns:last-child form button span {
+      color: #D00101; }
+    .contact .floating-content .row .columns:last-child form button:hover {
+      background: #D00101; }
+      .contact .floating-content .row .columns:last-child form button:hover i {
+        color: #FFF; }
+      .contact .floating-content .row .columns:last-child form button:hover span {
+        color: #FFF; }
+
+.products .content .item {
+  border: 1px solid #CCC;
+  height: 600px;
+  width: 80%;
+  margin: auto;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+  .products .content .item label {
+    position: absolute;
+    left: 0;
+    bottom: 46px;
+    padding: 5px 15px;
+    background-color: #015393;
+    color: #FFF;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-family: "Avenir"; }
+  .products .content .item small {
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    padding: 5px 15px;
+    background-color: #4896d2;
+    color: #FFF;
+    font-size: 18px;
+    font-family: "Avenir"; }
+.products .content .controls a {
+  padding: 15px 20px;
+  color: #FFF;
+  position: absolute;
+  bottom: 0; }
+  .products .content .controls a.prev {
+    background-color: #015393;
+    right: 264px; }
+  .products .content .controls a.next {
+    background-color: #4896d2;
+    right: 210px; }
+
+.content .row .columns {
+  padding: 10px; }
+  .content .row .columns .item {
+    border: 2px solid #EEE;
+    height: 120px;
+    position: relative; }
+    .content .row .columns .item i {
+      color: #015393;
+      position: absolute;
+      top: 50%;
+      left: 25px;
+      transform: translateY(-50%); }
+    .content .row .columns .item label {
+      position: absolute;
+      font-size: 18px;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-family: "Avenir";
+      letter-spacing: 2px;
+      top: 20px;
+      left: 120px; }
+.content .controls {
+  text-align: center;
+  margin-top: 25px; }
+  .content .controls a {
+    margin-right: 10px; }
+    .content .controls a:hover i:before {
+      content: "\f111"; }
+    .content .controls a i {
+      color: #015393; }
 
 /*# sourceMappingURL=app.css.map */

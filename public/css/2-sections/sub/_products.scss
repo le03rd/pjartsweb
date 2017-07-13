@@ -1,0 +1,54 @@
+.products {
+	.content {
+		.item {
+			border: 1px solid #CCC;
+			height: 600px;
+			width: 80%;
+			margin: auto;
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+
+			label {
+				position: absolute;
+				left: 0;
+				bottom: 46px;
+				padding: 5px 15px;
+				background-color: $equipments_col1;
+				color: #FFF;
+				text-transform: uppercase;
+				font-size: 22px;
+				font-family: $font_avenir;
+			}
+			small {
+				position: absolute;
+				left: 0;
+				bottom: 10px;
+				padding: 5px 15px;
+				background-color: $equipments_col2;
+				color: #FFF;
+				font-size: 18px;
+				font-family: $font_avenir;
+			}
+		}
+
+		.controls {
+			a {
+				padding: 15px 20px;
+				color: #FFF;
+				position: absolute;
+				bottom: 0;
+
+				&.prev {
+					background-color: $equipments_col1;
+					right: 264px;
+				}
+
+				&.next {
+					background-color: $equipments_col2;
+					right: 210px;
+				}
+			}
+		}
+	}
+}

@@ -1,5 +1,10 @@
 @import '_header';
 @import '_content';
+@import '_footer';
 
 // sub content
 @import 'sub/_about';
+@import 'sub/_equipments';
+@import 'sub/_contact';
+@import 'sub/_products';
+@import 'sub/_services';

@@ -45,7 +45,6 @@
 			}
 
 			&:last-child {
-				// background-color: $about_col2;
 				@include bg-image("./../assets/about-image.jpg");
 				padding: 15px;
 

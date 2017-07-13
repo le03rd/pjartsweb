@@ -1,0 +1,106 @@
+.contact {
+	.floating-content .row {
+		.columns {
+			&:first-child {
+    			padding: 40px 60px 0px 50px;
+				background-color: $contact_col1;
+
+				h4 {
+					font-size: 20px;
+					color: #FFF;
+					letter-spacing: 1px;
+    				margin-bottom: 15px;
+				}
+				p {
+					color: #FFF;
+    				line-height: 30px;
+    				letter-spacing: 1px;
+				}
+			}
+
+			&:last-child {
+				background-color: $contact_col2;
+				padding: 30px 30px;
+
+				h4 {
+					color: #FFF;
+					font-family: $font_avenir;
+					font-size: 20px;
+				}
+
+				form {
+					fieldset {
+						display: block;
+						width: 100%;
+						padding: 0px;
+						margin: 0px;
+						border: none;
+
+						&:first-child {
+							input {
+								background-color: $contact_col2;
+								color: #FFF;
+								padding: 5px 15px;
+								width: 49%!important;
+								display: inline-block!important;
+								@include placeholder(#FFF);
+
+								&:last-child {
+									float: right;
+								}
+							}
+						}
+
+						&:nth-child(2) {
+							input {
+								background-color: $contact_col2;
+								color: #FFF;
+								padding: 5px 15px;
+								width: 100%;
+								display: inline-block!important;
+								@include placeholder(#FFF);
+							}
+						}
+
+						&:nth-child(3) {
+							textarea {
+								background-color: $contact_col2;
+								color: #FFF;
+								padding: 5px 15px;
+								width: 100%;
+								display: inline-block!important;
+								@include placeholder(#FFF);
+							}
+						}
+					}
+					button {
+						border: 1px solid #FFF;
+						padding: 5px 15px 5px 5px;
+						margin-top: 10px;
+						background-color: #FFF;
+						float: right;
+
+						i {
+							color: $contact_col1;
+							margin: 0 10px;
+						}
+						span {
+							color: $contact_col1;
+						}
+
+						&:hover {
+							background: $contact_col1;
+
+							i {
+								color: #FFF;
+							}
+							span {
+								color: #FFF;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
