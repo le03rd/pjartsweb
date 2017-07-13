@@ -86,13 +86,11 @@ li.logo {
 
 .section {
   background-color: #fff;
-  height: 500px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   position: relative;
   top: -60px; }
   .section .heading {
     text-transform: uppercase;
-    display: inline-block;
     width: 100%;
     margin: 75px 0;
     padding: 0 100px;
@@ -105,7 +103,6 @@ li.logo {
       .section .heading.center::after {
         content: "";
         background-color: #019444;
-        height: 0px;
         position: absolute;
         bottom: -25px;
         padding: 0 13px;
@@ -117,10 +114,29 @@ li.logo {
         width: 26px; }
     .section .heading.left {
       text-align: left; }
+      .section .heading.left::after {
+        content: "";
+        background-color: #019444;
+        position: absolute;
+        bottom: -25px;
+        padding: 0 13px;
+        height: 3px;
+        display: block; }
     .section .heading.right {
       text-align: right; }
+      .section .heading.right::after {
+        content: "";
+        background-color: #019444;
+        position: absolute;
+        bottom: -25px;
+        padding: 0 13px;
+        height: 3px;
+        margin-left: -36px; }
   .section h1.heading {
-    font-size: 20px; }
+    font-size: 20px;
+    display: inline-block; }
+  .section h2.heading {
+    font-size: 16px; }
 
 .section-lockup.container {
   position: relative; }
