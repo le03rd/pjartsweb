@@ -1,0 +1,13 @@
+.about {
+	.floating-content .row {
+		.columns {
+			&:first-child {
+				background-color: $about_col1;
+			}
+
+			&:last-child {
+				background-color: $about_col2;
+			}
+		}
+	}
+}

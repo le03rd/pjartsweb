@@ -1,3 +1,6 @@
+@font-face {
+  font-family: "Avenir";
+  src: url(./../assets/fonts/avenir.ttf); }
 .container {
   width: 1050px;
   margin: auto; }
@@ -91,15 +94,33 @@ li.logo {
     text-transform: uppercase;
     display: inline-block;
     width: 100%;
-    margin: 50px 0; }
+    margin: 75px 0;
+    padding: 0 100px;
+    font-weight: 600;
+    letter-spacing: 10px;
+    font-family: "Avenir";
+    position: relative; }
     .section .heading.center {
       text-align: center; }
+      .section .heading.center::after {
+        content: "";
+        background-color: #019444;
+        height: 0px;
+        position: absolute;
+        bottom: -25px;
+        padding: 0 13px;
+        height: 3px;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        width: 26px; }
     .section .heading.left {
       text-align: left; }
     .section .heading.right {
       text-align: right; }
   .section h1.heading {
-    font-size: 21px; }
+    font-size: 20px; }
 
 .section-lockup.container {
   position: relative; }
@@ -109,5 +130,20 @@ li.logo {
   position: absolute;
   display: block;
   top: -280px; }
+
+.floating-content {
+  height: 350px; }
+  .floating-content .row {
+    margin: 0 -50px;
+    width: 1150px !important;
+    max-width: none;
+    width: 100%; }
+    .floating-content .row .large-6 {
+      height: 350px; }
+
+.about .floating-content .row .columns:first-child {
+  background-color: #019344; }
+.about .floating-content .row .columns:last-child {
+  background-color: #8be4b4; }
 
 /*# sourceMappingURL=app.css.map */

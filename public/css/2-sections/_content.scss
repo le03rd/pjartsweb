@@ -14,9 +14,30 @@
     	text-transform: uppercase;
 	    display: inline-block;
 	    width: 100%;
-	    margin: 50px 0;
+	    margin: 75px 0;
+	    padding: 0 100px;
+	    font-weight: 600;
+		letter-spacing: 10px;
+		font-family: $font_avenir;
+		position: relative;
+
 	    &.center {
 	    	text-align: center;
+
+	    	&::after {
+	    		content: "";
+				background-color: $green;
+				height: 0px;
+				position: absolute;
+				bottom: -25px;
+				padding: 0 13px;
+				height: 3px;
+				margin-left: auto;
+			    margin-right: auto;
+			    left: 0;
+			    right: 0;
+			    width: 26px;
+	    	}
 	    }
 
 		&.left {
@@ -29,7 +50,7 @@
     }
 
     h1.heading {
-    	font-size: 21px;
+    	font-size: 20px;
     }
 }
 
@@ -42,4 +63,19 @@
 	position: absolute;
 	display: block;
     top: -280px;
+}
+
+.floating-content {
+
+	height: 350px;
+	.row {
+	    margin: 0 -50px;
+        width: 1150px!important;
+        max-width: none;
+	
+		width: 100%;
+		.large-6 {
+			height: 350px;
+		}
+	}
 }
