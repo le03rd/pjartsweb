@@ -92,14 +92,14 @@ li.logo {
     display: inline-block;
     width: 100%;
     margin: 50px 0; }
+    .section .heading.center {
+      text-align: center; }
+    .section .heading.left {
+      text-align: left; }
+    .section .heading.right {
+      text-align: right; }
   .section h1.heading {
     font-size: 21px; }
-  .section .heading.center {
-    text-align: center; }
-  .section .heading.left {
-    text-align: left; }
-  .section .heading.right {
-    text-align: right; }
 
 .section-lockup.container {
   position: relative; }

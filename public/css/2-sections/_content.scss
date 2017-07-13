@@ -15,22 +15,21 @@
 	    display: inline-block;
 	    width: 100%;
 	    margin: 50px 0;
+	    &.center {
+	    	text-align: center;
+	    }
+
+		&.left {
+			text-align: left;
+	    }
+
+		&.right {
+			text-align: right;
+	    }
     }
 
     h1.heading {
     	font-size: 21px;
-    }
-
-    .heading.center {
-	    	text-align: center;
-	    }
-
-	.heading.left {
-		text-align: left;
-    }
-
-	.heading.right {
-		text-align: right;
     }
 }
 
