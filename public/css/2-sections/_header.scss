@@ -40,23 +40,59 @@ header {
 		padding: 0 20px;
 		width: 100%!important;
 
+		&:hover {
+			.nav-line {
+				&:before {
+					width: 50%;
+					transform: translateX(100%);
+				}
+				&:after {
+					width: 50%;
+					transform: translateX(-100%);
+				}
+			}
+		}
+
 		.nav-line {
 			position: relative;
 			width: 100%;
 
-			&::after {
-				content: "";
-				width: 100%;
-				background-color: $green;
-				height: 0px;
+			// &::after {
+			// 	content: "";
+			// 	width: 100%;
+			// 	background-color: $green;
+			// 	height: 0px;
+			// 	position: absolute;
+			// 	bottom: -50px;
+			// 	left: 0px;
+			// 	padding: 0 20px;
+			// }
+
+			// &:hover::after {
+			// 	height: 3px;
+			// }
+			&:before {
+				content: '';
+				width: 0px;
+				height: 3px;
+				background: $green;
 				position: absolute;
-				bottom: -50px;
-				left: 0px;
-				padding: 0 20px;
+				top: 70px;
+				left: 0;
+				transition: .5s;
+				mix-blend-mode: multiply;
 			}
 
-			&:hover::after {
+			&:after {
+				content: '';
+				width: 0px;
 				height: 3px;
+				background: $red;
+				position: absolute;
+				top: 70px;
+				right: 0;
+				transition: .5s;
+				mix-blend-mode: multiply;
 			}
 		}
 

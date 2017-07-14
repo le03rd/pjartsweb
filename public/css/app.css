@@ -52,20 +52,35 @@ header {
     display: inline-block;
     padding: 0 20px;
     width: 100% !important; }
+    .nav li:hover .nav-line:before {
+      width: 50%;
+      transform: translateX(100%); }
+    .nav li:hover .nav-line:after {
+      width: 50%;
+      transform: translateX(-100%); }
     .nav li .nav-line {
       position: relative;
       width: 100%; }
-      .nav li .nav-line::after {
-        content: "";
-        width: 100%;
-        background-color: #019444;
-        height: 0px;
+      .nav li .nav-line:before {
+        content: '';
+        width: 0px;
+        height: 3px;
+        background: #019444;
         position: absolute;
-        bottom: -50px;
-        left: 0px;
-        padding: 0 20px; }
-      .nav li .nav-line:hover::after {
-        height: 3px; }
+        top: 70px;
+        left: 0;
+        transition: .5s;
+        mix-blend-mode: multiply; }
+      .nav li .nav-line:after {
+        content: '';
+        width: 0px;
+        height: 3px;
+        background: #D00101;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        transition: .5s;
+        mix-blend-mode: multiply; }
     .nav li a {
       font-size: 16px;
       color: #444;
