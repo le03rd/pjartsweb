@@ -445,19 +445,19 @@ footer {
     background-color: #4896d2;
     right: 210px; }
 
-.content .row .columns {
+.services .content .row .columns {
   padding: 10px; }
-  .content .row .columns .item {
+  .services .content .row .columns .item {
     border: 2px solid #EEE;
     height: 120px;
     position: relative; }
-    .content .row .columns .item i {
+    .services .content .row .columns .item i {
       color: #015393;
       position: absolute;
       top: 50%;
       left: 25px;
       transform: translateY(-50%); }
-    .content .row .columns .item label {
+    .services .content .row .columns .item label {
       position: absolute;
       font-size: 18px;
       font-weight: 600;
@@ -466,14 +466,14 @@ footer {
       letter-spacing: 2px;
       top: 20px;
       left: 120px; }
-.content .controls {
+.services .content .controls {
   text-align: center;
   margin-top: 25px; }
-  .content .controls a {
+  .services .content .controls a {
     margin-right: 10px; }
-    .content .controls a:hover i:before {
+    .services .content .controls a:hover i:before {
       content: "\f111"; }
-    .content .controls a i {
+    .services .content .controls a i {
       color: #015393; }
 
 /*# sourceMappingURL=app.css.map */

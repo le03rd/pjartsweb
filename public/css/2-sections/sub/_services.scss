@@ -1,49 +1,51 @@
-.content {
-	.row {
-		.columns {
-			padding: 10px;
+.services {
+	.content {
+		.row {
+			.columns {
+				padding: 10px;
 
-			.item {
-				border: 2px solid #EEE;
-				height: 120px;
-				position: relative;
+				.item {
+					border: 2px solid #EEE;
+					height: 120px;
+					position: relative;
 
-				i {
-					color: $blue;
-					position: absolute;
-				    top: 50%;
-				    left: 25px;
-				    transform: translateY(-50%);
-				}
+					i {
+						color: $blue;
+						position: absolute;
+					    top: 50%;
+					    left: 25px;
+					    transform: translateY(-50%);
+					}
 
-				label {
-					position: absolute;
-					font-size: 18px;
-					font-weight: 600;
-					text-transform: uppercase;
-					font-family: $font_avenir;
-					letter-spacing: 2px;
-					top: 20px;
-					left: 120px;
+					label {
+						position: absolute;
+						font-size: 18px;
+						font-weight: 600;
+						text-transform: uppercase;
+						font-family: $font_avenir;
+						letter-spacing: 2px;
+						top: 20px;
+						left: 120px;
+					}
 				}
 			}
 		}
-	}
 
-	.controls {
-		text-align: center;
-		margin-top: 25px;
-		a {
-			margin-right: 10px;
+		.controls {
+			text-align: center;
+			margin-top: 25px;
+			a {
+				margin-right: 10px;
 
-			&:hover {
-				i:before {
-					content: "\f111";
+				&:hover {
+					i:before {
+						content: "\f111";
+					}
 				}
-			}
 
-			i {
-				color: $blue;
+				i {
+					color: $blue;
+				}
 			}
 		}
 	}
