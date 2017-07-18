@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="en" dir="ltr">
+<html class="no-js" lang="en" dir="ltr" ng-app="pjarts">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="public/css/app.css">
         <script src="public/vendor/modernizr/modernizr.js"></script>
     </head>
-    <body>
+    <body ng-controller="MainController as MainCtrl">
         <header>
             <div class="container">
                 <div class="nav-lockup">
@@ -73,17 +73,19 @@
                         <h1 class="heading center green" data-aos="fade" data-aos-duration="300">peter john arts</h1>
 
                         <div class="floating-content">
-                            <div class="row float-full">
-                                <div class="large-6 columns" data-aos="fade-right">
-                                    <h4>who we are</h4>
-                                    <p>Since its establishment in March 2013, Peter John Arts and Signs/Advertising has been engaged in the fabrication, supply and printing of various and quality business, tricycle, house number plates and street signs in the most part of luzon.</p>
-                                    <a href="#">
-                                        <i class="fa fa-plus"></i>
-                                        <span>know more</span>
-                                    </a>
-                                </div>
-                                <div class="large-6 columns" data-aos="fade-left">
-                                    <div class="fill"></div>
+                            <div class="float-full">
+                                <div class="row">
+                                    <div class="large-6 columns" data-aos="fade-right">
+                                        <h4>who we are</h4>
+                                        <p>Since its establishment in March 2013, Peter John Arts and Signs/Advertising has been engaged in the fabrication, supply and printing of various and quality business, tricycle, house number plates and street signs in the most part of luzon.</p>
+                                        <a href="#">
+                                            <i class="fa fa-plus"></i>
+                                            <span>know more</span>
+                                        </a>
+                                    </div>
+                                    <div class="large-6 columns" data-aos="fade-left">
+                                        <div class="fill"></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -164,27 +166,32 @@
                     
                     <div class="equipments p-relative" id="equipments">
                         <h2 class="heading right" data-aos="fade" data-aos-duration="300">our equipments</h2>
-
                         <div class="floating-content clearfix" data-aos="fade-left">
-                            <div class="row float-right p-relative">
-                                <div class="large-6 columns">
-                                    
-                                </div>
-                                <div class="large-6 columns">
-                                    <h4>Mimaki IJF-3042 Series Tabletop Flatbed UV Printer</h4>
-                                    <p>Mimaki IJF-3042 Series Tabletop Printers can print on a variety of substances including plastics, metal, wood, leather and glass onto materials up to 12" x 16".</p>
-                                </div>
+                            <div class="float-right p-relative">
+                                <ul class="example-orbit" data-orbit data-options="{{ orbit.equipments }}"> 
+                                  <li ng-repeat="item in equipments">
+                                    <div class="row">
+                                        <div class="large-6 columns" style="background-image: url({{ item.image }})">
+                                            
+                                        </div>
+                                        <div class="large-6 columns">
+                                            <h4>{{ item.equipment }}</h4>
+                                            <p>{{ item.description }}</p>
+                                        </div>
+                                    </div>
+                                  </li> 
+                                </ul>
                             </div>
                         </div>
 
-                        <div class="controls" data-aos="fade-left">
-                            <a href="#" class="prev"><i class="fa fa-chevron-left"></i></a>
-                            <a href="#" class="next"><i class="fa fa-chevron-right"></i></a>
-                        </div>
+                        <!-- <div class="controls" data-aos="fade-left">
+                            <button type="button" class="equipments-prev prev"><i class="fa fa-chevron-left"></i></button>
+                            <button type="button" class="equipments-next next"><i class="fa fa-chevron-right"></i></button>
+                        </div> -->
                     </div>
 
                     <div class="products clearfix" id="products">
-                        <h2 class="heading center" data-aos="fade" data-aos-duration="300">our products</h2>
+                        <h2 class="heading center" data-aos="fade" data-aos-duration="300">featured products</h2>
 
                         <div class="content p-relative" data-aos="fade">
                             <div class="item p-relative" style="background-image: url('public/assets/product-standee.png')">
@@ -203,28 +210,30 @@
                         <h2 class="heading left" data-aos="fade" data-aos-duration="300">contact us</h2>
 
                         <div class="floating-content clearfix" data-aos="fade-right">
-                            <div class="row float-left">
-                                <div class="large-6 columns">
-                                    <h4>Reach out to us!</h4>
-                                    <p>Got a question about Peter John Arts? Are you interested in partnering with us? Have some suggestions or just want to say hi? Contact us.</p>
-                                </div>
-                                <div class="large-6 columns">
-                                    <form>
-                                        <fieldset>
-                                            <input type="text" name="name" placeholder="Name" autocomplete="off">
-                                            <input type="text" name="email" placeholder="Email" autocomplete="off">
-                                        </fieldset>
-                                        <fieldset>
-                                            <input type="text" name="subject" placeholder="Subject" autocomplete="off">
-                                        </fieldset>
-                                        <fieldset>
-                                            <textarea type="text" name="message" placeholder="Message" autocomplete="off" rows="3"></textarea>
-                                        </fieldset>
-                                        <button>
-                                            <i class="fa fa-arrow-right"></i>
-                                            <span>submit</span>
-                                        </button>
-                                    </form>
+                            <div class="float-left">
+                                <div class="row">
+                                    <div class="large-6 columns">
+                                        <h4>Reach out to us!</h4>
+                                        <p>Got a question about Peter John Arts? Are you interested in partnering with us? Have some suggestions or just want to say hi? Contact us.</p>
+                                    </div>
+                                    <div class="large-6 columns">
+                                        <form>
+                                            <fieldset>
+                                                <input type="text" name="name" placeholder="Name" autocomplete="off">
+                                                <input type="text" name="email" placeholder="Email" autocomplete="off">
+                                            </fieldset>
+                                            <fieldset>
+                                                <input type="text" name="subject" placeholder="Subject" autocomplete="off">
+                                            </fieldset>
+                                            <fieldset>
+                                                <textarea type="text" name="message" placeholder="Message" autocomplete="off" rows="3"></textarea>
+                                            </fieldset>
+                                            <button>
+                                                <i class="fa fa-arrow-right"></i>
+                                                <span>submit</span>
+                                            </button>
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -282,10 +291,15 @@
             <i class="fa fa-arrow-up"></i>
         </a>
 
-        <script src="public/vendor/jquery/dist/jquery.min.js"></script>
+        <script src="public/vendor/foundation/js/vendor/jquery.js"></script>
         <script src="public/vendor/foundation/js/foundation.min.js"></script>
         <script src="public/vendor/aos/dist/aos.js"></script>
+        <script src="public/vendor/angular/angular.min.js"></script>
+        <script src="public/vendor/angular-resource/angular-resource.min.js"></script>
+        <script src="public/js/app.jquery.js"></script>
         <script src="public/js/app.js"></script>
+        <script src="public/js/controller.js"></script>
+        <script src="public/js/factory.js"></script>
         <script>
             $(document).ready(function(){
                 smoothScroll.init();

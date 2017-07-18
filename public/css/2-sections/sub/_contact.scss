@@ -70,6 +70,7 @@
 								width: 100%;
 								display: inline-block!important;
 								@include placeholder(#FFF);
+								resize: none;
 							}
 						}
 					}

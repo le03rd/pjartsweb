@@ -168,30 +168,31 @@ li.logo {
   display: block;
   top: -280px; }
 
+.floating-content div[class^='float-'], .floating-content div[class*=' float-'] {
+  margin: 0 -50px; }
+.floating-content .float-full {
+  width: 1150px !important; }
+  .floating-content .float-full .large-6 {
+    height: 350px; }
+.floating-content .float-right {
+  width: 850px !important;
+  float: right; }
+  .floating-content .float-right .large-6 {
+    height: 300px; }
+.floating-content .float-left {
+  width: 850px !important; }
+  .floating-content .float-left .large-6 {
+    height: 300px; }
 .floating-content .row {
-  margin: 0 -50px;
   max-width: none;
   width: 100%; }
-  .floating-content .row.float-full {
-    width: 1150px !important; }
-    .floating-content .row.float-full .large-6 {
-      height: 350px; }
-  .floating-content .row.float-right {
-    width: 850px !important;
-    float: right; }
-    .floating-content .row.float-right .large-6 {
-      height: 300px; }
-  .floating-content .row.float-left {
-    width: 850px !important; }
-    .floating-content .row.float-left .large-6 {
-      height: 300px; }
 
 .scrollup {
   width: 50px;
   height: 50px;
   position: fixed;
-  bottom: 90px;
-  right: 350px;
+  bottom: 60px;
+  right: 40px;
   display: none;
   background-color: #015393; }
   .scrollup i {
@@ -294,7 +295,6 @@ footer {
 .equipments .floating-content .row .columns {
   padding: 40px 70px 0px 50px; }
   .equipments .floating-content .row .columns:first-child {
-    background-image: url("./../assets/equipment-mimaki.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat; }
@@ -309,15 +309,15 @@ footer {
       color: #FFF;
       line-height: 30px;
       letter-spacing: 1px; }
-.equipments .controls a {
+.equipments .floating-content a {
   padding: 15px 15px;
   color: #FFF;
   position: absolute; }
-  .equipments .controls a.prev {
+  .equipments .floating-content a.orbit-prev {
     background-color: #015393;
     bottom: 130px;
     left: 210px; }
-  .equipments .controls a.next {
+  .equipments .floating-content a.orbit-next {
     background-color: #4896d2;
     bottom: 100px;
     left: 240px; }
@@ -390,7 +390,8 @@ footer {
       color: #FFF;
       padding: 5px 15px;
       width: 100%;
-      display: inline-block !important; }
+      display: inline-block !important;
+      resize: none; }
       .contact .floating-content .row .columns:last-child form fieldset:nth-child(3) textarea::-webkit-input-placeholder {
         /* Chrome/Opera/Safari */
         color: #FFF; }
