@@ -451,12 +451,12 @@ footer {
     border: 2px solid #EEE;
     height: 120px;
     position: relative; }
-    .services .content .row .columns .item i {
-      color: #015393;
+    .services .content .row .columns .item img {
       position: absolute;
       top: 50%;
       left: 25px;
-      transform: translateY(-50%); }
+      transform: translateY(-50%);
+      width: 85px; }
     .services .content .row .columns .item label {
       position: absolute;
       font-size: 18px;

@@ -9,12 +9,13 @@
 					height: 120px;
 					position: relative;
 
-					i {
-						color: $blue;
+					img {
+						// color: $blue;	
 						position: absolute;
 					    top: 50%;
 					    left: 25px;
 					    transform: translateY(-50%);
+					    width: 85px;
 					}
 
 					label {
