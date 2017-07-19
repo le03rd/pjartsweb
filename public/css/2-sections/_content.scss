@@ -89,35 +89,38 @@
 }
 
 .floating-content {
-	.row {
+	div[class^='float-'], div[class*=' float-']{
 	    margin: 0 -50px;
+	}
+
+	.float-full {
+    	width: 1150px!important;
+
+		.large-6 {
+			height: 350px;
+		}
+	}
+	
+	.float-right {
+    	width: 850px!important;
+    	float: right;
+
+		.large-6 {
+			height: 300px;
+		}
+	}
+
+	.float-left {
+    	width: 850px!important;
+
+		.large-6 {
+			height: 300px;
+		}
+	}
+
+	.row {
         max-width: none;
 		width: 100%;
-
-		&.float-full {
-        	width: 1150px!important;
-
-			.large-6 {
-				height: 350px;
-			}
-		}
-
-		&.float-right {
-        	width: 850px!important;
-        	float: right;
-
-			.large-6 {
-				height: 300px;
-			}
-		}
-
-		&.float-left {
-        	width: 850px!important;
-
-			.large-6 {
-				height: 300px;
-			}
-		}
 	}
 }
 
@@ -125,8 +128,10 @@
     width: 50px;
     height: 50px;
     position: fixed;
-    bottom: 90px;
-    right: 350px;
+    // bottom: 90px;
+    // right: 350px;
+    bottom: 60px;
+    right: 40px;
     display: none;
     background-color: $equipments_col1;
 

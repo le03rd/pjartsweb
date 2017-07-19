@@ -1,44 +1,44 @@
 .equipments {
-	.floating-content .row {
-		.columns {
-    		padding: 40px 70px 0px 50px;
+	.floating-content {
+		.row {
+			.columns {
+	    		padding: 40px 70px 0px 50px;
 
-			&:first-child {
-				@include bg-image("./../assets/equipment-mimaki.png");
-			}
-
-			&:last-child {
-				background-color: $equipments_col1;
-
-				h4 {
-					font-size: 20px;
-					color: #FFF;
-					letter-spacing: 1px;
-    				margin-bottom: 15px;
+				&:first-child {
+					@include bg-image-prop();
 				}
 
-				p {
-					color: #FFF;
-    				line-height: 30px;
-    				letter-spacing: 1px;
-				}
-			}
-		}
-	}
+				&:last-child {
+					background-color: $equipments_col1;
 
-	.controls {
+					h4 {
+						font-size: 20px;
+						color: #FFF;
+						letter-spacing: 1px;
+	    				margin-bottom: 15px;
+					}
+
+					p {
+						color: #FFF;
+	    				line-height: 30px;
+	    				letter-spacing: 1px;
+					}
+				}	
+			}
+		}				
+
 		a {
 			padding: 15px 15px;
 			color: #FFF;
 			position: absolute;
 
-			&.prev {
+			&.orbit-prev {
 				background-color: $equipments_col1;
 				bottom: 130px;
 				left: 210px;
 			}
 
-			&.next {
+			&.orbit-next {
 				background-color: $equipments_col2;
 				bottom: 100px;
 				left: 240px;
