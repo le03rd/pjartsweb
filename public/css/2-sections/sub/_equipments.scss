@@ -26,22 +26,31 @@
 				}	
 			}
 		}				
+		
+		.float-right {
+			position: relative;
 
-		a {
-			padding: 15px 15px;
-			color: #FFF;
-			position: absolute;
+			.controls {
+				position: absolute;
+				top: 40%;
+				
+				a {
+					padding: 15px 15px;
+					color: #FFF;
+					position: absolute;
 
-			&.orbit-prev {
-				background-color: $equipments_col1;
-				bottom: 130px;
-				left: 210px;
-			}
+					&.prev {
+						background-color: $equipments_col1;
+						bottom: 130px;
+						left: 210px;
+					}
 
-			&.orbit-next {
-				background-color: $equipments_col2;
-				bottom: 100px;
-				left: 240px;
+					&.next {
+						background-color: $equipments_col2;
+						bottom: 100px;
+						left: 240px;
+					}
+				}
 			}
 		}
 	}

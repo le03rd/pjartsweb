@@ -16,6 +16,7 @@
     "foundation": "^5.5.3",
     "font-awesome": "^4.7.0",
     "aos": "^2.2.0",
-    "angular": "^1.6.5"
+    "angular": "^1.6.5",
+    "slick-carousel": "^1.6.0"
   }
 }
