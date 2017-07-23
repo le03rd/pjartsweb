@@ -5,7 +5,7 @@
 	    		padding: 40px 70px 0px 50px;
 
 				&:first-child {
-					@include bg-image-prop();
+					@include bg-image('');
 				}
 
 				&:last-child {
@@ -25,7 +25,11 @@
 					}
 				}	
 			}
-		}				
+		}
+
+		.orbit-container {
+			position: initial;
+		}
 
 		a {
 			padding: 15px 15px;
@@ -35,13 +39,13 @@
 			&.orbit-prev {
 				background-color: $equipments_col1;
 				bottom: 130px;
-				left: 210px;
+				left: 0;
 			}
 
 			&.orbit-next {
 				background-color: $equipments_col2;
 				bottom: 100px;
-				left: 240px;
+				left: 40px;
 			}
 		}
 	}
