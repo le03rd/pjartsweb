@@ -1,5 +1,15 @@
 $(document).ready(function() {
-	$(document).foundation()
+	$(document).foundation();
+
+
+	$('.equipments-slider').slick({
+		infinite: true,
+  		slidesToShow: 1,
+  		lazyLoad: 'ondemand',
+  		prevArrow: '.equipments-prev',
+  		nextArrow: '.equipments-next',
+
+  	});
 });
 
 var smoothScroll = {

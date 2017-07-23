@@ -310,20 +310,23 @@ footer {
       color: #FFF;
       line-height: 30px;
       letter-spacing: 1px; }
-.equipments .floating-content .orbit-container {
-  position: initial; }
-.equipments .floating-content a {
-  padding: 15px 15px;
-  color: #FFF;
-  position: absolute; }
-  .equipments .floating-content a.orbit-prev {
-    background-color: #015393;
-    bottom: 130px;
-    left: 0; }
-  .equipments .floating-content a.orbit-next {
-    background-color: #4896d2;
-    bottom: 100px;
-    left: 40px; }
+.equipments .floating-content .float-right {
+  position: relative; }
+  .equipments .floating-content .float-right .controls {
+    position: absolute;
+    top: 40%; }
+    .equipments .floating-content .float-right .controls a {
+      padding: 15px 15px;
+      color: #FFF;
+      position: absolute; }
+      .equipments .floating-content .float-right .controls a.prev {
+        background-color: #015393;
+        bottom: 130px;
+        left: 210px; }
+      .equipments .floating-content .float-right .controls a.next {
+        background-color: #4896d2;
+        bottom: 100px;
+        left: 240px; }
 
 .contact .floating-content .row .columns:first-child {
   padding: 40px 60px 0px 50px;
