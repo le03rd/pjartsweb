@@ -15,50 +15,38 @@
         <script src="public/vendor/modernizr/modernizr.js"></script>
     </head>
     <body ng-controller="MainController as MainCtrl">
-        <header>
+        <header id="home">
             <div class="container">
                 <div class="nav-lockup">
                     <ul class="nav">
-                        <li>
-                            <div class="nav-line">
-                                <a href="#home">home</a>
-                            </div>
-                        </li>
-                        <li>    
-                            <div class="nav-line">
-                                <a href="#about">about</a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="nav-line">
-                                <a href="#services">services</a>
-                            </div>
+                        <li ng-repeat="m in menu.list | filter:{ position: 'left' }">
+                            <div class="nav-line"><a href="{{ m.target }}" ng-bind="m.title"></a></div>
                         </li>
                         <li class="logo">
                             <a href="#home">
-                                <img class="logo" src="public/assets/logo.png" alt="Peter John">
+                                <img class="logo" src="public/assets/pj-logo.png" alt="Peter John">
                             </a>
                         </li>
-                        <li>
-                            <div class="nav-line">
-                                <a href="#equipments">equipments</a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="nav-line">
-                                <a href="#products">products</a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="nav-line">
-                                <a href="#contact">contact</a>
-                            </div>
+                        <li ng-repeat="m in menu.list | filter:{ position: 'right' }">
+                            <div class="nav-line"><a href="{{ m.target }}" ng-bind="m.title"></a></div>
                         </li>
                     </ul>
                 </div>
 
                 <div class="claim-lockup">
                     <img src="public/assets/tagline.png" alt="" class="claim">
+                </div>
+            </div>
+            <div class="sticky-header" data-aos="fade-down" data-aos-anchor="#services">
+                <a href="#home">
+                    <img class="logo" src="public/assets/pj-logo.png" alt="Peter John">
+                </a>
+                <div class="nav-lockup">
+                    <ul class="nav">
+                        <li ng-repeat="m in menu.list">
+                            <div class="nav-line"><a href="{{ m.target }}" ng-bind="m.title"></a></div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </header>
@@ -95,72 +83,35 @@
                     <div class="services clearfix" id="services">
                         <h2 class="heading center" data-aos="fade" data-aos-duration="300">our services</h2>
 
-                        <div class="content">
-                            <div class="row">
-                                <div class="large-4 columns" data-aos="fade-left">
-                                    <div class="item">
-                                        <img src="public/assets/icon-trophy.png" width="135">
-                                        <label>Wood Engraving</label>
+                        <div class="floating-content">
+                            <div class="float-full">
+                                <div class="row">
+                                    <div class="large-6 columns image-container" data-aos="flip-up">
+                                        <div class="fill"></div>
+                                    </div>
+                                    <div class="large-6 columns desc-container green" data-aos="flip-down">
+                                        <h4>Wood Etching</h4>
+                                        <p></p>
                                     </div>
                                 </div>
-                                <div class="large-4 columns" data-aos="fade">
-                                    <div class="item">
-                                        <img src="public/assets/icon-medal.png" width="135">
-                                        <label>Wood Printing</label>
+                                <div class="row">
+                                    <div class="large-6 columns desc-container blue" data-aos="flip-up">
+                                        <h4>who we are 2</h4>
+                                        <p></p>
+                                    </div>
+                                    <div class="large-6 columns image-container" data-aos="flip-down">
+                                        <div class="fill"></div>
                                     </div>
                                 </div>
-                                <div class="large-4 columns" data-aos="fade-right">
-                                    <div class="item">
-                                        <img src="public/assets/icon-woodprint.png" width="135">
-                                        <label>Ceramic Tile Printing</label>
+                                <div class="row">
+                                    <div class="large-6 columns image-container" data-aos="flip-up">
+                                        <div class="fill"></div>
+                                    </div>
+                                    <div class="large-6 columns desc-container red" data-aos="flip-down">
+                                        <h4>who we are 3</h4>
+                                        <p></p>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="large-4 columns" data-aos="fade-left">
-                                    <div class="item">
-                                        <img src="public/assets/icon-trophy.png" width="135">
-                                        <label>Acrylic Printing</label>
-                                    </div>
-                                </div>
-                                <div class="large-4 columns" data-aos="fade">
-                                    <div class="item">
-                                        <img src="public/assets/icon-trophy.png" width="135">
-                                        <label>Tarpaulin Printing</label>
-                                    </div>
-                                </div>
-                                <div class="large-4 columns" data-aos="fade-right">
-                                    <div class="item">
-                                        <img src="public/assets/icon-trophy.png" width="135">
-                                        <label>Sticker Print & Cut</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="large-4 columns" data-aos="fade-left">
-                                    <div class="item">
-                                        <img src="public/assets/icon-trophy.png" width="135">
-                                        <label>Glass/Wood Printing</label>
-                                    </div>
-                                </div>
-                                <div class="large-4 columns" data-aos="fade">
-                                    <div class="item">
-                                        <img src="public/assets/icon-trophy.png" width="135">
-                                        <label>Wood Laser Cutting & Engraving</label>
-                                    </div>
-                                </div>
-                                <div class="large-4 columns" data-aos="fade-right">
-                                    <div class="item">
-                                        <img src="public/assets/icon-trophy.png" width="135">
-                                        <label>Sticker Print & Cut</label>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="controls" data-aos="fade" data-aos-duration="300">
-                                <a href="#"><i class="fa fa-circle"></i></a>
-                                <a href="#"><i class="fa fa-circle-o"></i></a>
-                                <a href="#"><i class="fa fa-circle-o"></i></a>
                             </div>
                         </div>
                     </div>
@@ -170,7 +121,7 @@
                         
                         <div class="floating-content clearfix" data-aos="fade-left">
                             <div class="float-right p-relative">
-                                <div class="equipments-slider">   
+                                <div class="equipments-slider">
                                     <div class="slider-item" ng-repeat="item in equipments">
                                         <div class="row">
                                             <div class="large-6 columns" style="background-image: url({{ item.image }})">
@@ -196,14 +147,16 @@
                         <h2 class="heading center" data-aos="fade" data-aos-duration="300">featured products</h2>
 
                         <div class="content p-relative" data-aos="fade">
-                            <div class="item p-relative" style="background-image: url('public/assets/product-standee.png')">
-                                <label>Standee Sintraboard</label>
-                                <small>A human-sized display for special occasions</small>
+                            <div class="products-slider">
+                                <div ng-repeat="product in products.featured" class="slider-item item p-relative" ng-style="{ 'background-image': 'url(' + product.src + ')' }">
+                                    <label ng-bind="product.caption"></label>
+                                    <small ng-bind="product.sub"></small>
+                                </div>
                             </div>
 
                             <div class="controls">
-                                <a href="#" class="prev"><i class="fa fa-arrow-left"></i></a>
-                                <a href="#" class="next"><i class="fa fa-arrow-right"></i></a>
+                                <a href="#" class="products-prev prev"><i class="fa fa-arrow-left"></i></a>
+                                <a href="#" class="products-next next"><i class="fa fa-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -245,37 +198,16 @@
                         <div class="row">
                             <div class="large-7 columns">
                                 <h5>branches</h5>
-                                <ul>
-                                    <li>#726 Camanang Riverside, Urdaneta City</li>
-                                    <li>Stall #148, Building A 168 Mall, Urdaneta City</li>
-                                    <li>Ambrosio Street, Urdaneta City</li>
-                                    <li>IT Zone, SM City Rosales, Pangasinan</li>
-                                    <li>#18 Brgy. Cut-Cut 1st. Romulo Boulevard, Tarlac City</li>
-                                </ul>
+                                <ul><li ng-repeat="branch in branches" ng-bind="branch.location"></li></ul>
                             </div>
                             <div class="large-5 columns">
                                 <h5>contacts</h5>
-                                <ul>
-                                    <li>(075) 600-2169</li>
-                                    <li>(075) 574-9715</li>
-                                    <li>(075) 696-2651 ~ 52</li>
-                                    <li>(+63) 918-917-5981</li>
-                                    <li>(+63) 916-790-8573</li>
-                                    <li>(+63) 925-511-1002</li>
-                                    <li>(+63) 933-856-1721</li>
-                                </ul>
+                                <ul><li ng-repeat="contact in contacts" ng-bind="contact.number"></li></ul>
                             </div>
                         </div>
                         <div class="divider"></div>
                         <div class="row">
-                            <ul>
-                                <li><a href="#home">Home</a></li>
-                                <li><a href="#about">About</a></li>
-                                <li><a href="#services">Services</a></li>
-                                <li><a href="#equipments">Equipments</a></li>
-                                <li><a href="#products">Products</a></li>
-                                <li><a href="#contact">Contact</a></li>
-                            </ul>
+                            <ul><li ng-repeat="m in menu.list"><a ng-href="{{ m.target }}" ng-bind="m.title"></a></li></ul>
                         </div>
                         <div class="social-buttons">
                             <a href="http://www.facebook.com"><img src="public/assets/social-buttons/fb.png"></a>
@@ -289,6 +221,7 @@
                 </div>
             </div>
         </div>
+
         <a href="#" class="scrollup">
             <i class="fa fa-arrow-up"></i>
         </a>
@@ -308,10 +241,10 @@
                 smoothScroll.init();
                 AOS.init({
                     duration: 600,
-                    easing: 'ease-in-cubic',
-                    delay: 100,
+                    easing: 'ease-in-cubic'
                 });
                 scrollToTop.init();
+                slickSlider.init();
             });
         </script>
     </body>

@@ -1,16 +1,25 @@
 $(document).ready(function() {
 	$(document).foundation();
-
-
-	$('.equipments-slider').slick({
-		infinite: true,
-  		slidesToShow: 1,
-  		lazyLoad: 'ondemand',
-  		prevArrow: '.equipments-prev',
-  		nextArrow: '.equipments-next',
-
-  	});
 });
+
+var slickSlider = {
+	init: function() {
+		$('.equipments-slider').slick({
+			infinite: true,
+	  		slidesToShow: 1,
+	  		lazyLoad: 'ondemand',
+	  		prevArrow: '.equipments-prev',
+	  		nextArrow: '.equipments-next',
+	  	});
+	  	$('.products-slider').slick({
+			infinite: true,
+	  		slidesToShow: 1,
+	  		lazyLoad: 'ondemand',
+	  		prevArrow: '.products-prev',
+	  		nextArrow: '.products-next',
+	  	});
+	}
+};
 
 var smoothScroll = {
 	init: function() {
@@ -20,7 +29,7 @@ var smoothScroll = {
 				var hash = this.hash;
 
 				$('html, body').animate({
-					scrollTop: $(hash).offset().top
+					scrollTop: $(hash).offset().top - 75
 				}, 800, function(){
 					window.location.hash = hash;
 				});

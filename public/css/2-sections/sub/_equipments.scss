@@ -34,21 +34,21 @@
 				position: absolute;
 				top: 40%;
 				
-				a {
+				button {
 					padding: 15px 15px;
 					color: #FFF;
 					position: absolute;
 
 					&.prev {
 						background-color: $equipments_col1;
-						bottom: 130px;
-						left: 210px;
+						bottom: -50px;
+						left: -40px;
 					}
 
 					&.next {
 						background-color: $equipments_col2;
-						bottom: 100px;
-						left: 240px;
+						bottom: -90px;
+						left: -5px;
 					}
 				}
 			}

@@ -1,32 +1,40 @@
 .services {
-	.content {
+	.floating-content {
 		.row {
+			width: 85%;
+
 			.columns {
-				padding: 10px;
+				&.desc-container {
+					background: $about_col1;
 
-				.item {
-					border: 2px solid #EEE;
-					height: 120px;
-					position: relative;
-
-					img {
-						position: absolute;
-					    top: 50%;
-					    left: 25px;
-					    transform: translateY(-50%);
-					    width: 85px;
+					&.green {
+						background: $green;
+					}
+					&.red {
+						background: $red;
+					}
+					&.blue {
+						background: $blue;
 					}
 
-					label {
-						position: absolute;
-						font-size: 18px;
-						font-weight: 600;
+	    			padding: 40px 70px 0px 50px;
+
+					h4 {
 						text-transform: uppercase;
-						font-family: $font_avenir;
-						letter-spacing: 2px;
-						top: 20px;
-						left: 120px;
+						font-size: 20px;
+						letter-spacing: 10px;
+	    				margin-bottom: 15px;
+	    				color: #FFF;
 					}
+					p {
+						font-size: 16px;
+	    				line-height: 30px;
+	    				letter-spacing: 1px;
+	    				color: #FFF;
+					}
+				}
+				&.image-container {
+					
 				}
 			}
 		}
