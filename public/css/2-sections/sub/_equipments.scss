@@ -1,31 +1,69 @@
 .equipments {
 	.floating-content {
 		.row {
+			width: 85%;
+
 			.columns {
-	    		padding: 40px 70px 0px 50px;
+				&.desc-container {
+					background: $about_col1;
 
-				&:first-child {
-					@include bg-image('');
-				}
+					&.green {
+						background: $green;
+					}
+					&.red {
+						background: $red;
+					}
+					&.blue {
+						background: $blue;
+					}
 
-				&:last-child {
-					background-color: $equipments_col1;
+	    			padding: 40px 70px 0px 50px;
 
 					h4 {
+						text-transform: uppercase;
 						font-size: 20px;
-						color: #FFF;
-						letter-spacing: 1px;
+						letter-spacing: 10px;
 	    				margin-bottom: 15px;
+	    				color: #FFF;
 					}
-
 					p {
-						color: #FFF;
+						font-size: 16px;
 	    				line-height: 30px;
 	    				letter-spacing: 1px;
+	    				color: #FFF;
 					}
-				}	
+				}
+				&.image-container {
+					
+				}
 			}
-		}				
+		}
+		// .row {
+		// 	.columns {
+	 //    		padding: 40px 70px 0px 50px;
+
+		// 		&:first-child {
+		// 			@include bg-image('');
+		// 		}
+
+		// 		&:last-child {
+		// 			background-color: $equipments_col1;
+
+		// 			h4 {
+		// 				font-size: 20px;
+		// 				color: #FFF;
+		// 				letter-spacing: 1px;
+	 //    				margin-bottom: 15px;
+		// 			}
+
+		// 			p {
+		// 				color: #FFF;
+	 //    				line-height: 30px;
+	 //    				letter-spacing: 1px;
+		// 			}
+		// 		}	
+		// 	}
+		// }				
 		
 		.float-right {
 			position: relative;

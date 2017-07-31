@@ -1,40 +1,33 @@
 .services {
-	.floating-content {
+	.content {
 		.row {
-			width: 85%;
-
 			.columns {
-				&.desc-container {
-					background: $about_col1;
+				padding: 10px;
 
-					&.green {
-						background: $green;
-					}
-					&.red {
-						background: $red;
-					}
-					&.blue {
-						background: $blue;
+				.item {
+					border: 2px solid #EEE;
+					height: 120px;
+					position: relative;
+
+					img {
+						color: $blue;
+						position: absolute;
+					    top: 50%;
+    					max-height: 140px;
+					    left: 15px;
+					    transform: translateY(-50%);
 					}
 
-	    			padding: 40px 70px 0px 50px;
-
-					h4 {
+					label {
+						position: absolute;
+						font-size: 18px;
+						font-weight: 600;
 						text-transform: uppercase;
-						font-size: 20px;
-						letter-spacing: 10px;
-	    				margin-bottom: 15px;
-	    				color: #FFF;
+						font-family: $font_avenir;
+						letter-spacing: 2px;
+						top: 20px;
+						left: 120px;
 					}
-					p {
-						font-size: 16px;
-	    				line-height: 30px;
-	    				letter-spacing: 1px;
-	    				color: #FFF;
-					}
-				}
-				&.image-container {
-					
 				}
 			}
 		}

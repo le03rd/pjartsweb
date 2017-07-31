@@ -69,6 +69,26 @@ header {
     width: 1150px;
     overflow: hidden;
     height: 100%; }
+    header .container > .nav-lockup .nav-line:before {
+      content: '';
+      width: 0px;
+      height: 3px;
+      background: #019444;
+      position: absolute;
+      top: 70px;
+      left: 0;
+      transition: .5s;
+      mix-blend-mode: multiply; }
+    header .container > .nav-lockup .nav-line:after {
+      content: '';
+      width: 0px;
+      height: 3px;
+      background: #D00101;
+      position: absolute;
+      top: 70px;
+      right: 0;
+      transition: .5s;
+      mix-blend-mode: multiply; }
   header .sticky-header {
     position: fixed;
     top: 0;
@@ -131,26 +151,6 @@ header {
     .nav li .nav-line {
       position: relative;
       width: 100%; }
-      .nav li .nav-line:before {
-        content: '';
-        width: 0px;
-        height: 3px;
-        background: #019444;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        transition: .5s;
-        mix-blend-mode: multiply; }
-      .nav li .nav-line:after {
-        content: '';
-        width: 0px;
-        height: 3px;
-        background: #D00101;
-        position: absolute;
-        top: 70px;
-        right: 0;
-        transition: .5s;
-        mix-blend-mode: multiply; }
     .nav li a {
       font-size: 16px;
       color: #444;
@@ -237,6 +237,9 @@ li.logo {
   position: absolute;
   display: block;
   top: -280px; }
+  .section-lockup .bg-accent img {
+    max-width: 103%;
+    margin-top: 17px; }
 
 .floating-content div[class^='float-'], .floating-content div[class*=' float-'] {
   margin: 0 -49px; }
@@ -362,24 +365,28 @@ footer {
     height: 100%;
     border: 4px solid rgba(1, 147, 68, 0.55); }
 
-.equipments .floating-content .row .columns {
-  padding: 40px 70px 0px 50px; }
-  .equipments .floating-content .row .columns:first-child {
-    background-image: url("");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat; }
-  .equipments .floating-content .row .columns:last-child {
-    background-color: #015393; }
-    .equipments .floating-content .row .columns:last-child h4 {
+.equipments .floating-content .row {
+  width: 85%; }
+  .equipments .floating-content .row .columns.desc-container {
+    background: #019344;
+    padding: 40px 70px 0px 50px; }
+    .equipments .floating-content .row .columns.desc-container.green {
+      background: #019444; }
+    .equipments .floating-content .row .columns.desc-container.red {
+      background: #D00101; }
+    .equipments .floating-content .row .columns.desc-container.blue {
+      background: #015393; }
+    .equipments .floating-content .row .columns.desc-container h4 {
+      text-transform: uppercase;
       font-size: 20px;
-      color: #FFF;
-      letter-spacing: 1px;
-      margin-bottom: 15px; }
-    .equipments .floating-content .row .columns:last-child p {
-      color: #FFF;
+      letter-spacing: 10px;
+      margin-bottom: 15px;
+      color: #FFF; }
+    .equipments .floating-content .row .columns.desc-container p {
+      font-size: 16px;
       line-height: 30px;
-      letter-spacing: 1px; }
+      letter-spacing: 1px;
+      color: #FFF; }
 .equipments .floating-content .float-right {
   position: relative; }
   .equipments .floating-content .float-right .controls {
@@ -539,36 +546,36 @@ footer {
     background-color: #4896d2;
     right: 110px; }
 
-.services .floating-content .row {
-  width: 85%; }
-  .services .floating-content .row .columns.desc-container {
-    background: #019344;
-    padding: 40px 70px 0px 50px; }
-    .services .floating-content .row .columns.desc-container.green {
-      background: #019444; }
-    .services .floating-content .row .columns.desc-container.red {
-      background: #D00101; }
-    .services .floating-content .row .columns.desc-container.blue {
-      background: #015393; }
-    .services .floating-content .row .columns.desc-container h4 {
+.services .content .row .columns {
+  padding: 10px; }
+  .services .content .row .columns .item {
+    border: 2px solid #EEE;
+    height: 120px;
+    position: relative; }
+    .services .content .row .columns .item img {
+      color: #015393;
+      position: absolute;
+      top: 50%;
+      max-height: 140px;
+      left: 15px;
+      transform: translateY(-50%); }
+    .services .content .row .columns .item label {
+      position: absolute;
+      font-size: 18px;
+      font-weight: 600;
       text-transform: uppercase;
-      font-size: 20px;
-      letter-spacing: 10px;
-      margin-bottom: 15px;
-      color: #FFF; }
-    .services .floating-content .row .columns.desc-container p {
-      font-size: 16px;
-      line-height: 30px;
-      letter-spacing: 1px;
-      color: #FFF; }
-.services .floating-content .controls {
+      font-family: "Avenir";
+      letter-spacing: 2px;
+      top: 20px;
+      left: 120px; }
+.services .content .controls {
   text-align: center;
   margin-top: 25px; }
-  .services .floating-content .controls a {
+  .services .content .controls a {
     margin-right: 10px; }
-    .services .floating-content .controls a:hover i:before {
+    .services .content .controls a:hover i:before {
       content: "\f111"; }
-    .services .floating-content .controls a i {
+    .services .content .controls a i {
       color: #015393; }
 
 /*# sourceMappingURL=app.css.map */

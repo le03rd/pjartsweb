@@ -37,14 +37,14 @@
                     <img src="public/assets/tagline.png" alt="" class="claim">
                 </div>
             </div>
-            <div class="sticky-header" data-aos="fade-down" data-aos-anchor="#services">
+            <div class="sticky-header" data-aos="fade-down" data-aos-anchor="#equipments">
                 <a href="#home">
                     <img class="logo" src="public/assets/pj-logo.png" alt="Peter John">
                 </a>
                 <div class="nav-lockup">
                     <ul class="nav">
                         <li ng-repeat="m in menu.list">
-                            <div class="nav-line"><a href="{{ m.target }}" ng-bind="m.title"></a></div>
+                            <div class="nav-line sticky"><a href="{{ m.target }}" ng-bind="m.title"></a></div>
                         </li>
                     </ul>
                 </div>
@@ -67,9 +67,10 @@
                                     <div class="large-6 columns" data-aos="fade-right">
                                         <h4>who we are</h4>
                                         <p>Since its establishment in March 2013, Peter John Arts and Signs/Advertising has been engaged in the fabrication, supply and printing of various and quality business, tricycle, house number plates and street signs in the most part of luzon.</p>
-                                        <a href="#" data-reveal-id="myModal">
+                                        <!-- <a href="#" data-reveal-id="myModal" ng-click="$display_about = !$display_about"> -->
+                                        <a href="" ng-click="$display_about = !$display_about;">
                                             <i class="fa fa-plus"></i>
-                                            <span>know more</span>
+                                            <span>know {{ !$display_about ? 'more' : 'less' }}</span>
                                         </a>
                                     </div>
                                     <div class="large-6 columns" data-aos="fade-left">
@@ -80,70 +81,53 @@
                         </div>
                     </div>
 
-                    <div class="services clearfix" id="services">
-                        <h2 class="heading center" data-aos="fade" data-aos-duration="300">our services</h2>
+                    <div class="equipments clearfix" id="equipments" ng-show="$display_about">
+                        <h2 class="heading center" data-aos="fade" data-aos-duration="300">company profile</h2>
+                    </div>
+
+                    <div class="equipments clearfix" id="equipments" ng-show="!$display_about">
+                        <h2 class="heading center" data-aos="fade" data-aos-duration="300">our equipments</h2>
 
                         <div class="floating-content">
                             <div class="float-full">
-                                <div class="row">
-                                    <div class="large-6 columns image-container" ng-style="{ 'background-image': 'url(public/assets/services/acrylic-medal.jpg)' }" data-aos="flip-up">
+                                <div class="row" ng-repeat-start="item in equipments" ng-if="$odd">
+                                    <div class="large-6 columns image-container" ng-style="{ 'background-image': 'url(' + item.image + ')' }" data-aos="flip-up">
                                         <div class="fill"></div>
                                     </div>
-                                    <div class="large-6 columns desc-container green" data-aos="flip-down">
-                                        <h4>Wood Etching</h4>
-                                        <p></p>
+                                    <div class="large-6 columns desc-container {{ item.color }}" data-aos="flip-down">
+                                        <h4 ng-bind="item.equipment"></h4>
+                                        <p ng-bind="item.description"></p>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="large-6 columns desc-container blue" data-aos="flip-up">
-                                        <h4>who we are 2</h4>
-                                        <p></p>
+                                <div class="row" ng-if="$even" ng-repeat-end>
+                                    <div class="large-6 columns desc-container {{ item.color }}" data-aos="flip-down">
+                                        <h4 ng-bind="item.equipment"></h4>
+                                        <p ng-bind="item.description"></p>
                                     </div>
-                                    <div class="large-6 columns image-container" data-aos="flip-down">
+                                    <div class="large-6 columns image-container" ng-style="{ 'background-image': 'url(' + item.image + ')' }" data-aos="flip-up">
                                         <div class="fill"></div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="large-6 columns image-container" data-aos="flip-up">
-                                        <div class="fill"></div>
-                                    </div>
-                                    <div class="large-6 columns desc-container red" data-aos="flip-down">
-                                        <h4>who we are 3</h4>
-                                        <p></p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="equipments p-relative" id="equipments">
-                        <h2 class="heading right" data-aos="fade" data-aos-duration="300">our equipments</h2>
-                        
-                        <div class="floating-content clearfix" data-aos="fade-left">
-                            <div class="float-right p-relative">
-                                <div class="equipments-slider">
-                                    <div class="slider-item" ng-repeat="item in equipments">
-                                        <div class="row">
-                                            <div class="large-6 columns" style="background-image: url({{ item.image }})">
-                                                
-                                            </div>
-                                            <div class="large-6 columns">
-                                                <h4>{{ item.equipment }}</h4>
-                                                <p>{{ item.description }}</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
 
-                                <div class="controls" data-aos="fade-left">
-                                    <button type="button" class="equipments-prev prev"><i class="fa fa-chevron-left"></i></button>
-                                    <button type="button" class="equipments-next next"><i class="fa fa-chevron-right"></i></button>
+                    <div class="services clearfix" id="services" ng-show="!$display_about">
+                        <h2 class="heading center" data-aos="fade" data-aos-duration="300">our services</h2>
+
+                        <div class="content">
+                            <div class="row">
+                                <div class="large-4 columns" data-aos="{{ item.anim }}" ng-repeat="item in services">
+                                    <div class="item">
+                                        <img ng-src="{{ item.src }}" width="90">
+                                        <label ng-bind="item.service"></label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="products clearfix" id="products">
+                    <div class="products clearfix" id="products" ng-show="!$display_about">
                         <h2 class="heading center" data-aos="fade" data-aos-duration="300">featured products</h2>
 
                         <div class="content p-relative" data-aos="fade">
@@ -161,7 +145,7 @@
                         </div>
                     </div>
 
-                    <div class="contact" id="contact">
+                    <div class="contact" id="contact" ng-show="!$display_about">
                         <h2 class="heading left" data-aos="fade" data-aos-duration="300">contact us</h2>
 
                         <div class="floating-content clearfix" data-aos="fade-right">

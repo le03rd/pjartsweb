@@ -9,6 +9,34 @@ header {
 		width: 1150px;
 	    overflow: hidden;
     	height: 100%;
+
+        >.nav-lockup {
+            .nav-line {
+                &:before {
+                    content: '';
+                    width: 0px;
+                    height: 3px;
+                    background: $green;
+                    position: absolute;
+                    top: 70px;
+                    left: 0;
+                    transition: .5s;
+                    mix-blend-mode: multiply;
+                }
+
+                &:after {
+                    content: '';
+                    width: 0px;
+                    height: 3px;
+                    background: $red;
+                    position: absolute;
+                    top: 70px;
+                    right: 0;
+                    transition: .5s;
+                    mix-blend-mode: multiply;
+                }
+            }
+        }
 	}
 
 	.sticky-header {
@@ -91,34 +119,10 @@ header {
 			}
 		}
 
-		.nav-line {
-			position: relative;
-			width: 100%;
-
-			&:before {
-				content: '';
-				width: 0px;
-				height: 3px;
-				background: $green;
-				position: absolute;
-				top: 70px;
-				left: 0;
-				transition: .5s;
-				mix-blend-mode: multiply;
-			}
-
-			&:after {
-				content: '';
-				width: 0px;
-				height: 3px;
-				background: $red;
-				position: absolute;
-				top: 70px;
-				right: 0;
-				transition: .5s;
-				mix-blend-mode: multiply;
-			}
-		}
+        .nav-line {
+            position: relative;
+            width: 100%;
+        }
 
     	a {
     		font-size: 16px;
