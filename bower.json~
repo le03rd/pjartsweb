@@ -17,7 +17,10 @@
     "font-awesome": "^4.7.0",
     "aos": "^2.2.0",
     "angular": "^1.6.5",
+<<<<<<< HEAD
     "angular-resource": "^1.6.5",
+=======
+>>>>>>> c0f261385be133b0ee3a8481acc373fc5088fbc8
     "slick-carousel": "^1.6.0"
   }
 }
