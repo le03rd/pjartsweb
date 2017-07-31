@@ -58,7 +58,10 @@
 		background-color: #fff;
 		z-index: 100;
 		border-radius: 6px;
-		padding: 15px;
+		padding: 25px;
+	    max-height: 460px;
+	    overflow-x: hidden;
+	    overflow-y: scroll;
 	}
 }
 
