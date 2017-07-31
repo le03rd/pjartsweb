@@ -15,3 +15,49 @@
 .c-white {
 	color: #FFF !important;
 }
+
+.reveal-modal {
+	width: 1050px;
+	max-width: none;
+	border-radius: 8px;
+	background-color: transparent;
+	overflow: hidden;
+	border: none;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+	.close-reveal-modal {
+		background-color: #fff;
+		border-radius: 100%;
+		color: #000;
+		font-size: 20px;
+		padding: 5px 9px;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		right: 18px;
+		color: red;
+	}
+
+	.modal-border {
+		width: 100%;
+		background-color: #86cbe7;
+		opacity: 0.2!important;	
+		padding: 45px;
+		height: 100%!important;
+		position: absolute;	
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: -100;
+	}
+
+	.content-modal {
+		background-color: #fff;
+		z-index: 100;
+		border-radius: 6px;
+		padding: 15px;
+	}
+}
+
+.reveal-modal-bg {
+	display: none!important;
+}
