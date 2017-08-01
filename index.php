@@ -75,10 +75,10 @@ if ($_SERVER['HTTPS'] != "on") {
                                     <div class="large-6 columns" data-aos="fade-right">
                                         <h4>who we are</h4>
                                         <p>Since its establishment in March 2013, Peter John Arts and Signs/Advertising has been engaged in the fabrication, supply and printing of various and quality business, tricycle, house number plates and street signs in the most part of luzon.</p>
-                                        <!-- <a href="#" data-reveal-id="myModal" ng-click="$display_about = !$display_about"> -->
+
                                         <a href="" ng-click="$display_about = !$display_about;">
-                                            <i class="fa fa-plus"></i>
-                                            <span>know {{ !$display_about ? 'more' : 'less' }}</span>
+                                            <i class="fa" ng-class="{ 'fa-plus': !$display_about, 'fa-minus': $display_about }"></i>
+                                            <span>show {{ !$display_about ? 'more' : 'less' }}</span>
                                         </a>
                                     </div>
                                     <div class="large-6 columns" data-aos="fade-left">
@@ -89,8 +89,39 @@ if ($_SERVER['HTTPS'] != "on") {
                         </div>
                     </div>
 
-                    <div class="equipments clearfix" ng-if="$display_about">
+                    <div class="company-profile clearfix" id="company-profile" ng-cloak ng-if="$display_about">
                         <h2 class="heading center" data-aos="fade" data-aos-duration="300">company profile</h2>
+
+                        <div class="content">
+                            <div class="row">
+                                <ol>
+                                    <li>ESTABLISHED IN MARCH 3, 2003 AS SOLE PROPREITORSHIP NAMED PETER JOHN ARTS AND SIGNS/ADVERTISING WITH OFFICE ADDRESS AT BLOCK 3, LOT 23, TEACHERSVILLE SUBD., URDANETA CITY, PANGASINAN.</li>
+                                    <li>NAME OF OWNER PROPRIETOR: PEDRO B. DELOS REYES JR. CONTACT NO. 09189175981/09228448921.</li>
+                                    <li>SATTELITE OFFICE: 2ND LOOR STAINLESS STAR BUILDING, KM. 14, MCARTHUR HIWAY, MALINTA, VALENZUELA CITY, METRO MANILA. TEL. NO. 02-4406244, FAXNO. 02-2913900</li>
+                                    <li>E-MAIL ADD: PETERJOHN.ARTSANDSIGNSADS@YAHOO.COM</li>
+                                    <li>DEPARTMENT OF TRADE AND INDUSTRY (DTI) REGISTRATION NO. 00045474 ISSUED ON MARCH 3, 2003 TO MARCH 3, 2008</li>
+                                    <li>DEPARTMENT OF TRADE AND INDUSTRY (DTI) REGISTRATION NO. 00368140 ISSUED ON MARCH 1, 2008 TO MARCH 1, 2013</li>
+                                    <li>DEPARTMENT OF TRADE AND INDUSTRY (DTI) REGISTRATION NO. 01994197 ISSUED ON MARCH 1, 2013 TO MARCH 1, 2018</li>
+                                    <li>BUREAU OF INTERNAL REVENUE REGISTRATION NO. 03-006-012222</li>
+                                    <li>PHILGEPS REGISTERED AUGUST 6, 2004 WITH ITS LATEST REGISTRATION CERTIFICATE NO. 2014-14778.</li>
+                                </ol>
+                                <p class="text-justify">
+                                    SINCE ITS ESTABLISHMENT IN MARCH 2003 PETER JOHN ARTS AND SIGNS/ ADVERTISING HAS BEEN ENGAGED IN THE FABRICATION, SUPPLY AND PRINTING OF VARIOUS AND QUALITY BUSINESS, TRICYCLE, HOUSE NUMBER PLATES AND STREET SIGNS IN MOST PARTS OF LUZON.
+                                </p>
+                                <p class="text-justify">
+                                    IT HAD LONG BEEN SERING THE BUSINESS AND TRICYCLE PLATES REQUIREMENTS OF THE CITY GOVERNMENT OF URDANETA, PANGASINAN, AND THAT OF THE MUNICIPALITIES OF ASINGAN, ROSALES, STA. MARIA, TAYUG, SAN QUINTIN, BAUTISTA, CALASIAO, ALL OF THE PROVINCE OF PANGASINAN, MEYCAUAYAN, STA. MARIA, BALAGTAS, PLARIDEL, ALL OF THE PROVINCE OF BULACAN, CITY GOVERNMENT OF BALANGA, PILAR, HERMOSA, DINALUPIHAN, LIMAY AND MARIVELES IN THE PROVINCE OF BATAAN, LIKEWISE IN THE CITY OF SAN JOSE, SCIENCE CITY OF MUNOZ, CUYAPO, LLANERA, TALAVERA AND GUIMBA IN THE PROVINCE OF NUEVA ECIJA. 
+                                </p>
+                                <p class="text-justify">
+                                    IN 2012, IT HAS ALSO ENGAGED IN FABRICATION OF DIFFERENT TRAFFIC AND DIRECTIONAL SIGNAGES AND CANTILEVER POST. The Company continues to establish branches with its latest Satellite Office located in KM. 14 Stainless Star Bldg., Malinta, Valenzuela City.
+                                </p>
+                                <p class="text-justify">
+                                    In August 2016, PETER JOHN ARTS AND SIGNS/ADVERTISING established its print shop located at Stall No. 148, Building A 168 Mall, Urdaneta City, another shop at Ambrosio St., Urdaneta City.
+                                </p>
+                                <p class="text-justify">
+                                    In September of the same year it started its kiosk which engaged in UV PRINTING located at I.T. Zone, SM City Rosales, Carmen Rosales Pangasinan, the first of its kind in Pangasinan, and soon to open its expansion branch at SM Urdaneta City.
+                                </p>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="equipments clearfix" id="equipments" ng-if="!$display_about">

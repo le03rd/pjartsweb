@@ -9,8 +9,8 @@ app.controller('MainController', function($scope, fctry) {
 			{ title: 'Home', target: '#home', position: 'left' },
 			{ title: 'About', target: '#about', position: 'left' },
 			{ title: 'Equipments', target: '#equipments', position: 'left' },
-			{ title: 'Products', target: '#products', position: 'right' },
 			{ title: 'Services', target: '#services', position: 'right' },
+			{ title: 'Products', target: '#products', position: 'right' },
 			{ title: 'Contact', target: '#contact', position: 'right' }
 		],
 		selected: null
