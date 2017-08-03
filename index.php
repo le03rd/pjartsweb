@@ -12,6 +12,14 @@ if ($_SERVER['HTTPS'] != "on") {
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Peter John Arts and Signs Advertisement, Trophies Signage Acrylic Display, Containers, Frames, Nameplates, Giveaways, Dispensers, Desk Accessories."/>
+        <link rel="canonical" href="https://www.peterjohnarts.com/" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Peter John Arts and Signs Advertisement" />
+        <meta property="og:description" content="Peter John Arts and Signs Advertisement, Customized Plaques, Trophies Signage Acrylic Display, Containers, Frames, Nameplates, Giveaways, Dispensers, Desk Accessories." />
+        <meta property="og:url" content="https:///www.peterjohnarts.com/" />
+        <meta property="og:site_name" content="peterjohnarts" />
         <title>Peter John Arts | Home</title>
         <link rel="icon" type="image/png" href="public/assets/favicon-32x32.png" sizes="32x32" />
         <link rel="stylesheet" href="public/vendor/font-awesome/css/font-awesome.min.css" />
