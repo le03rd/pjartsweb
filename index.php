@@ -32,7 +32,7 @@ if ($_SERVER['HTTPS'] != "on") {
                         </li>
                         <li class="logo">
                             <a href="#home">
-                                <img class="logo" src="public/assets/pj-logo.png" alt="Peter John">
+                                <img class="logo" src="public/assets/pj-logo.resized.png" alt="Peter John">
                             </a>
                         </li>
                         <li ng-repeat="m in menu.list | filter:{ position: 'right' }">
@@ -47,7 +47,7 @@ if ($_SERVER['HTTPS'] != "on") {
             </div>
             <div class="sticky-header" data-aos="fade-down" data-aos-anchor="#equipments">
                 <a href="#home">
-                    <img class="logo" src="public/assets/pj-logo.png" alt="Peter John">
+                    <img class="logo" src="public/assets/pj-logo.resized.png" alt="Peter John">
                 </a>
                 <div class="nav-lockup">
                     <ul class="nav">
